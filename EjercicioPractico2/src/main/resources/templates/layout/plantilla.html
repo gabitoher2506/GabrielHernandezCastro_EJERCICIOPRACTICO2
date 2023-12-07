@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <!-- Configuración del encabezado, metadatos y estilos -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" th:href="@{css/styles.css}" />
+    <title>FideFlights - Página Principal</title>
+</head>
+<body>
+    <!-- Sección de encabezado de la página -->
+    <header>
+        <h1>FideFlights</h1>
+        <!-- Barra de navegación con enlaces a Inicio y Lista de Vuelos -->
+        <nav>
+            <ul>
+                <li><a th:href="@{/}">Inicio</a></li>
+                <li><a th:href="@{/flights/list}">Lista de Vuelos</a></li>
+                <!-- Puedes agregar más enlaces de navegación según tus necesidades -->
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Sección principal del cuerpo de la página -->
+    <main>
+        <!-- Sección del héroe con un mensaje destacado -->
+        <section id="hero">
+            <h2>Descubre tu próximo destino con FideFlights</h2>
+            <p>Explora nuestras increíbles ofertas de vuelos y reserva tu viaje hoy mismo.</p>
+            <!-- Enlace para ver los vuelos disponibles -->
+            <a th:href="@{/flights/list}" class="cta-button">Ver Vuelos Disponibles</a>
+        </section>
+
+        <!-- Sección de video destacando destinos -->
+        <section id="video">
+            <video controls>
+                <!-- Fuente del video -->
+                <source th:src="@{/video/destinations.mp4}" type="video/mp4">
+                Tu navegador no soporta el elemento de video.
+            </video>
+        </section>
+    </main>
+
+    <!-- Sección de pie de página -->
+    <footer>
+        <p>&copy; 2023 FideFlights. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head th:fragment="head">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" th:href="@{css/styles.css}" />
+        <title>FideFlights - Página Principal</title>
+    </head>
+    <body>
+        <header th:fragment="header" id="header">
+            <h1>FideFlights</h1>
+            <nav>
+                <ul>
+                    <li><a th:href="@{/}">Inicio</a></li>
+                    <li><a th:href="@{/flights/list}">Lista de Vuelos</a></li>
+                    <!-- Otros enlaces de navegación según tus necesidades -->
+                </ul>
+            </nav>
+        </header>
+        <section id="hero">
+            <h2>Descubre tu próximo destino con FideFlights</h2>
+            <p>Explora nuestras increíbles ofertas de vuelos y reserva tu viaje hoy mismo.</p>
+            <a th:href="@{/flights/list}" class="cta-button">Ver Vuelos Disponibles</a>
+        </section>
+
+        <section id="video">
+            <!-- Video destacando destinos -->
+            <video controls>
+                <source th:src="@{/video/destinations.mp4}" type="video/mp4">
+                Tu navegador no soporta el elemento de video.
+            </video>
+        </section>
+    </body>
+</html>
